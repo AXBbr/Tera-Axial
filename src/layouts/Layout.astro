@@ -1,0 +1,26 @@
+interface Props { title: string; description: string; } const { title, description } = Astro.props;
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content={description} />
+<meta name="viewport" content="width=device-width" />
+<title>{title}</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#1A0D33] text-[#FDFCF8]">
+<slot />
+
+	<a href="[https://wa.me/5521997605820](https://wa.me/5521997605820)" 
+	   class="fixed bottom-6 right-6 z-50 bg-[#25D366] p-4 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center"
+	   target="_blank" aria-label="WhatsApp">
+		<svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-4.752 8.282c-2.13 0-4.216-.518-6.056-1.5l-.436-.259-4.502 1.18 1.2-4.388-.285-.453C1.657 15.42 1 13.56 1 11.607 1 6.31 5.31 2 10.607 2 15.9 2 20.21 6.31 20.21 11.607c0 5.298-4.31 9.608-9.608 9.608m0-20.115C4.74 2.549 0 7.289 0 13.107c0 1.868.489 3.69 1.417 5.3L0 24l5.776-1.516c1.547.844 3.287 1.289 5.06 1.289 5.867 0 10.638-4.77 10.638-10.638 0-5.817-4.77-10.637-10.638-10.637z"/></svg>
+	</a>
+</body>
+</html>
+<style is:global>
+html { scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; margin: 0; }
+h1, h2, h3, .font-serif { font-family: 'Cormorant Garamond', serif; }
+</style>
