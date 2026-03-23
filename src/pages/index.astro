@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+	title="Alexandre Barbosa | Tera Axial - Psicanálise, Hipnose Clínica e Constelação"
+	description="Método Tera Axial por Alexandre Barbosa no Rio de Janeiro. Tratamento resolutivo para ansiedade, traumas e autossabotagem.">
+	
+	<main class="relative min-h-screen flex flex-col items-center justify-center px-6 text-center bg-[#1A0D33] overflow-hidden">
+		<div class="absolute inset-0 z-0">
+			<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] bg-[radial-gradient(circle,#2C1654_0%,transparent_70%)] opacity-60"></div>
+			<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-full bg-gradient-to-b from-transparent via-[#C9A84C]/30 to-[#C9A84C]/10"></div>
+		</div>
+
+		<div class="relative z-10 flex flex-col items-center">
+			<div class="mb-12 opacity-40 tracking-[0.5em] text-[10px] uppercase text-[#FDFCF8]">
+				Tera Axial <span class="mx-2 text-[#C9A84C]">|</span> Alexandre Barbosa
+			</div>
+
+			<h1 class="text-6xl md:text-[120px] font-serif text-[#C9A84C] mb-6 animate-fade-in font-light leading-none tracking-tight">
+				Alexandre Barbosa
+			</h1>
+
+			<p class="text-[10px] md:text-sm uppercase tracking-[0.4em] mb-16 text-[#FDFCF8] font-medium">
+				Psicanálise <span class="text-[#C9A84C] mx-3">•</span> 
+				Hipnose Clínica <span class="text-[#C9A84C] mx-3">•</span> 
+				Constelação Familiar
+			</p>
+
+			<div class="max-w-2xl mb-20">
+				<div class="w-8 h-px bg-[#C9A84C] mx-auto mb-8 opacity-50"></div>
+				<h2 class="text-2xl md:text-4xl font-serif italic text-[#FDFCF8] font-light leading-relaxed">
+					"Chegar à raiz é o que liberta."
+				</h2>
+			</div>
+
+			<a href="#contato" class="bg-[#C9A84C] text-[#1A0D33] px-16 py-6 rounded-full font-bold uppercase text-[11px] tracking-[0.25em] hover:scale-105 transition-all shadow-[0_20px_50px_rgba(201,168,76,0.15)]">
+				Quero minha conversa gratuita
+			</a>
+		</div>
+        <div class="absolute bottom-10 animate-bounce opacity-30">
+            <svg class="w-6 h-6 text-[#C9A84C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+	</main>
+
+	<section class="py-32 px-6 bg-[#1A0D33]">
+		<div class="max-w-4xl mx-auto">
+			<span class="text-[#C9A84C] uppercase tracking-[0.3em] text-[10px] block mb-4">O Método</span>
+			<h2 class="font-serif text-4xl md:text-5xl text-[#FDFCF8] mb-12">O que é a <em class="text-[#C9A84C] not-italic">Tera Axial</em></h2>
+			<div class="space-y-8 text-[#FDFCF8]/80 text-lg leading-relaxed font-light">
+				<p>Todo sofrimento que persiste tem uma <strong>origem emocional</strong>. Não é apenas um pensamento ou comportamento, mas uma emoção primária registrada no corpo.</p>
+				<p>A Tera Axial vai até a raiz primordial — o ponto exato onde o padrão se originou e se ancora. Por meio de um processo conversacional profundo, as barreiras do subconsciente cedem naturalmente.</p>
+                <p class="text-[#C9A84C] font-serif italic text-2xl mt-12 text-center">"Não tratamos somente os sintomas. Chegamos à raiz."</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-32 px-6 bg-[#2C1654]/30">
+		<div class="max-w-6xl mx-auto">
+			<div class="text-center mb-20">
+				<h2 class="font-serif text-4xl md:text-6xl text-[#FDFCF8] mb-4">Quatro encontros. Um processo real.</h2>
+				<div class="w-24 h-px bg-[#C9A84C] mx-auto opacity-30"></div>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+				{[
+					{ n: "01", t: "A Abertura", d: "Identificamos a emoção primordial que sustenta o sofrimento." },
+					{ n: "02", t: "As Outras Raízes", d: "Revelamos como essa raiz se ramifica nos seus padrões atuais." },
+					{ n: "03", t: "A Nova Raiz", d: "Integração sistêmica onde novos caminhos se consolidam." },
+					{ n: "04", t: "O Retorno", d: "Avaliação e reforço das mudanças após um mês." }
+				].map(item => (
+					<div class="p-8 border border-[#C9A84C]/10 hover:border-[#C9A84C]/40 transition-all bg-[#1A0D33]/50">
+						<span class="font-serif text-4xl text-[#C9A84C]/30 block mb-4">{item.n}</span>
+						<h3 class="font-serif text-xl text-[#C9A84C] mb-4">{item.t}</h3>
+						<p class="text-sm text-[#FDFCF8]/60 leading-relaxed">{item.d}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section id="contato" class="py-32 px-6 bg-[#1A0D33] text-center">
+		<div class="max-w-2xl mx-auto">
+			<h2 class="font-serif text-4xl text-[#FDFCF8] mb-8">Sente que é hora de chegar à raiz?</h2>
+			<p class="text-[#FDFCF8]/70 mb-12">A primeira conversa é gratuita, sem compromisso e totalmente confidencial.</p>
+			<a href="https://wa.me/5521997605820" class="bg-[#C9A84C] text-[#1A0D33] px-16 py-6 rounded-full font-bold uppercase text-[11px] tracking-[0.25em] inline-block hover:scale-105 transition-all">
+				Falar com Alexandre no WhatsApp
+			</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	@keyframes fade-in {
+		from { opacity: 0; transform: translateY(30px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	.animate-fade-in {
+		animation: fade-in 2s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+    :global(html) { scroll-behavior: smooth; }
+</style>
