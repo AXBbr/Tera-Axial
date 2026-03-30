@@ -1,170 +1,142 @@
----
-const whatsapp = "https://wa.me/5521997605820";
----
-
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tera Axial | Hipnose Conversacional e Terapia Profunda</title>
+<title>Tera Axial | Hipnose Terapêutica</title>
+<meta name="description" content="Acesse a raiz primordial do que te aflige através da hipnose conversacional e visão sistêmica.">
 
-<meta name="description" content="Hipnose conversacional com base na constelação familiar, psicanálise e neurociência. Acesse a raiz primordial do que te aflige."/>
+<link rel="stylesheet" href="styles.css">
 
-<!-- PIXEL META -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'SEU_ID');
-fbq('track', 'PageView');
-</script>
-
-<!-- GOOGLE -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=SEU_ID"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'SEU_ID');
-</script>
-
-<style>
-body {
-background:#0b0b0b;
-color:#fff;
-font-family: Arial;
-margin:0;
-}
-section {
-padding:60px 20px;
-max-width:1100px;
-margin:auto;
-}
-h1,h2,h3 {
-line-height:1.3;
-}
-.btn {
-background:#d4af37;
-color:#000;
-padding:15px 25px;
-text-decoration:none;
-display:inline-block;
-margin-top:20px;
-}
-.card {
-background:#111;
-padding:20px;
-margin:10px;
-}
-.grid {
-display:flex;
-flex-wrap:wrap;
-}
-</style>
 </head>
 
 <body>
 
 <!-- HERO -->
-<section>
-<img src="/images/logo.webp" width="120"/>
+<section class="hero">
+    <div class="container">
 
-<h1>
-Angústia, sensação constante de estar ansioso, autossabotagem...
-</h1>
+        <img src="assets/logo.png" class="logo">
 
-<p><strong>Não é falta de força de vontade.</strong></p>
+        <h1>
+        Angústia, sensação constante de estar ansioso, autossabotagem, relações que se repetem, dores pelo corpo.<br><br>
+        <strong>Não é falta de força de vontade.</strong>
+        </h1>
 
-<p>
-A Tera Axial é um processo terapêutico baseado em hipnose conversacional,
-integrando visão sistêmica (base da constelação familiar), psicanálise e neurociência.
-</p>
+        <p>
+        A Tera Axial é um processo terapêutico baseado em hipnose conversacional,
+        integrando visão sistêmica (base da constelação familiar), psicanálise e neurociência.
+        </p>
 
-<img src="/images/foto1.webp" width="300"/>
+        <a href="https://wa.me/5521997605820" class="btn">Agendar sessão</a>
 
-<a class="btn" href={whatsapp}>Agendar sessão</a>
+    </div>
 </section>
 
-<!-- IDENTIFICAÇÃO -->
-<section>
-<h2>Você trava, adia, desiste...</h2>
-
-<p>
-E quanto mais tenta resolver conscientemente...
-inconscientemente continua voltando.
-</p>
+<!-- DOR -->
+<section class="section dark">
+<div class="container">
+<h2>Você trava, adia, desiste…</h2>
+<p>E quanto mais tenta resolver conscientemente… inconscientemente continua voltando.</p>
+</div>
 </section>
 
-<!-- VÍDEOS -->
-<section>
-<h2>Depoimentos</h2>
+<!-- SOBRE -->
+<section class="section">
+<div class="container flex">
 
-<iframe width="100%" height="300" src="https://www.youtube.com/embed/c7h0wAeBm6M"></iframe>
+<img src="assets/foto2.jpg">
 
-<iframe width="100%" height="300" src="https://www.youtube.com/embed/WVR99NWIlPk"></iframe>
+<div>
+<h2>Sobre Alexandre</h2>
 
-<iframe width="100%" height="300" src="https://www.youtube.com/embed/Q6PhHWcCOAQ"></iframe>
+<p>
+Cresci no Rio de Janeiro, filho de mãe solo e sem a presença do pai.
+Isso não me destruiu, mas me fez entender o que é carregar algo que ninguém vê.
+</p>
 
+<p>
+Ali, eu vi de perto algo que hoje guia o meu trabalho:
+👉 pessoas não sofrem só por falta de informação.
+</p>
+
+</div>
+
+</div>
 </section>
 
 <!-- MÉTODO -->
-<section>
-<h2>Terapia que encontra a raiz primordial</h2>
+<section class="section dark">
+<div class="container">
+<h2>Como funciona a Tera Axial</h2>
 
 <p>
-Você não resolve um problema que nasce na raiz…
-tratando apenas os galhos.
+A Tera Axial busca a raiz primordial emocional dos padrões que se repetem.
+Não trata apenas os sintomas.
 </p>
-</section>
 
-<!-- OFERTA -->
-<section>
-<h2>Primeira sessão</h2>
+<p>
+👉 Vai direto ao ponto onde aquilo começou.
+</p>
 
-<p>Já é uma sessão terapêutica completa</p>
-
-<h3>R$250</h3>
-
-<a class="btn" href={whatsapp}>Quero agendar</a>
-</section>
-
-<!-- BLOG -->
-<section>
-<h2>Artigos</h2>
-
-<div class="grid">
-<div class="card">
-<h3>Filhos do vazio</h3>
-<a href="/blog/filhos-do-vazio">Ler</a>
-</div>
-
-<div class="card">
-<h3>Relacionamentos repetitivos</h3>
-<a href="/blog/relacionamentos">Ler</a>
-</div>
 </div>
 </section>
 
-<!-- RODAPÉ -->
-<section>
-<a href="/sobre">Sobre</a> |
-<a href="/metodo">Método</a> |
-<a href="/blog">Blog</a>
+<!-- VÍDEOS -->
+<section class="section">
+<div class="container">
+<h2>Depoimentos</h2>
+
+<div class="videos">
+
+<iframe src="https://www.youtube.com/embed/c7h0wAeBm6M"></iframe>
+<iframe src="https://www.youtube.com/embed/WVR99NWIlPk"></iframe>
+<iframe src="https://www.youtube.com/embed/Q6PhHWcCOAQ"></iframe>
+
+</div>
+
+</div>
 </section>
 
-<!-- WHATSAPP FIXO -->
-<a href={whatsapp}
-style="position:fixed;bottom:20px;right:20px;background:green;padding:15px;border-radius:50%;">
-Whats
-</a>
+<!-- IMAGENS -->
+<section class="section dark">
+<div class="container galeria">
+
+<img src="assets/foto1.jpg">
+<img src="assets/foto2.jpg">
+<img src="assets/foto3.jpg">
+
+</div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section">
+<div class="container center">
+
+<h2>Se isso faz sentido para você…</h2>
+
+<p>O próximo passo é começar.</p>
+
+<a href="https://wa.me/5521997605820" class="btn">Agendar sessão</a>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+
+<p>© Tera Axial</p>
+
+<div class="links">
+<a href="#">Método</a>
+<a href="#">Sobre</a>
+<a href="#">Artigos</a>
+</div>
+
+</div>
+</footer>
 
 </body>
 </html>
