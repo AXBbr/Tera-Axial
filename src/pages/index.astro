@@ -1,1 +1,45 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+
+<section class="min-h-screen flex flex-col justify-center items-center px-6 text-center">
+
+  <h1 class="text-3xl font-serif mb-4">
+    Antes de avançar, preciso entender melhor o seu momento.
+  </h1>
+
+  <p class="mb-8 text-gray-300">
+    Leva menos de 1 minuto.
+  </p>
+
+  <form id="form" class="w-full max-w-md space-y-4">
+
+    <input placeholder="Nome" class="w-full p-3 rounded bg-secondary" required />
+    <input placeholder="Email" class="w-full p-3 rounded bg-secondary" required />
+
+    <textarea placeholder="Situação atual" class="w-full p-3 rounded bg-secondary"></textarea>
+
+    <select class="w-full p-3 rounded bg-secondary">
+      <option>Já fez terapia?</option>
+      <option>Sim</option>
+      <option>Não</option>
+    </select>
+
+    <button type="submit" class="w-full bg-cta py-3 rounded">
+      Continuar
+    </button>
+
+  </form>
+
+</section>
+
+<script>
+  document.getElementById("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    window.location.href = "/";
+  });
+</script>
+
+</BaseLayout>
