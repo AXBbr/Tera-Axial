@@ -1,215 +1,53 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
-const WA = '5521997605820';
-const MSG = encodeURIComponent('Olá Alexandre, vi o site da Tera Axial e quero agendar minha sessão de entrada.');
-const WA_LINK = `https://wa.me/${WA}?text=${MSG}`;
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<Layout
-  titulo="Tera Axial | Terapia que encontra a raiz"
-  descricao="Hipnose conversacional e psicanálise para chegar à raiz do que te aflige. Alexandre Barbosa, psicanalista carioca."
->
+<BaseLayout>
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-[#1a0b2e]/90 backdrop-blur-md border-b border-[#c5a059]/20">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="/" class="font-serif text-[#c5a059] text-2xl font-medium tracking-wide">Tera Axial</a>
-    <div class="hidden md:flex items-center gap-8 text-xs tracking-widest uppercase text-white/70">
-      <a href="#metodo" class="hover:text-[#c5a059] transition-colors">Método</a>
-      <a href="#processo" class="hover:text-[#c5a059] transition-colors">Processo</a>
-      <a href="#sobre" class="hover:text-[#c5a059] transition-colors">Sobre</a>
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+
+  <h1 class="text-4xl font-serif mb-6 max-w-3xl">
+    Pare de lutar só contra os sintomas. Existe uma programação emocional travando sua vida.
+  </h1>
+
+  <div class="mt-10 text-left max-w-md w-full">
+    <h2 class="text-xl mb-4">Seja honesto com você por um momento…</h2>
+
+    <div class="space-y-3" id="checklist">
+      <label><input type="checkbox" /> Ansiedade constante</label><br>
+      <label><input type="checkbox" /> Padrões repetitivos</label><br>
+      <label><input type="checkbox" /> Vazio no peito</label><br>
+      <label><input type="checkbox" /> Já fez terapia e não mudou</label><br>
+      <label><input type="checkbox" /> Autossabotagem</label><br>
+      <label><input type="checkbox" /> Dificuldade financeira recorrente</label>
     </div>
-    <a href={WA_LINK} target="_blank" class="bg-[#c5a059] text-[#1a0b2e] px-5 py-2.5 text-xs font-bold uppercase tracking-widest hover:bg-white transition-all">
-      Agendar sessão
+
+    <div id="resultado" class="hidden mt-6 text-gold">
+      Se você marcou mais que dois então o problema provavelmente não está no que você está fazendo…<br><br>
+      está na programação emocional que está rodando na sua raiz.
+    </div>
+
+    <a href="https://wa.me/SEUNUMERO?text=Quero entender melhor como funciona a Tera Axial"
+       class="block mt-8 bg-cta text-center py-4 rounded">
+      Agendar pelo WhatsApp
     </a>
+
   </div>
-</nav>
 
-<section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 py-32 bg-[#1a0b2e] overflow-hidden">
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#2b0033_0%,_#1a0b2e_70%)]"></div>
-  
-  <div class="relative z-10 max-w-4xl mx-auto">
-    <span class="inline-block border border-[#c5a059] text-[#c5a059] px-4 py-1 text-[10px] uppercase tracking-[0.3em] mb-8">Processo terapêutico</span>
-
-    <h1 class="font-serif text-white text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.1] mb-8">
-      Angústia, ansiedade,<br/>
-      autossabotagem, padrões<br/>
-      que se repetem.
-      <em class="text-[#c5a059] not-italic block mt-2 text-3xl md:text-5xl italic">Não é falta de força de vontade.</em>
-    </h1>
-
-    <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-      A Tera Axial é um processo terapêutico baseado em hipnose conversacional,
-      integrando visão sistêmica e psicanálise para chegar à raiz do que te aflige.
-    </p>
-
-    <p class="text-[#c5a059] font-serif italic text-xl md:text-2xl mb-12 border-y border-[#c5a059]/20 py-4">
-      "Se fosse falta de força de vontade… você já teria resolvido, não é mesmo?"
-    </p>
-
-    <a href={WA_LINK} target="_blank" class="bg-[#c5a059] text-[#1a0b2e] px-12 py-5 text-sm font-bold uppercase tracking-[0.2em] hover:bg-white transition-all shadow-2xl">
-      Quero agendar minha sessão
-    </a>
-  </div>
 </section>
 
-<section id="metodo" class="py-24 md:py-32 px-6 bg-white relative">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <div>
-        <span class="text-[#c5a059] text-xs font-bold tracking-widest uppercase">A natureza do sofrimento</span>
-        <h2 class="font-serif text-[#1a0b2e] text-3xl md:text-5xl font-medium mt-4 mb-8 leading-snug">
-          Na natureza, toda planta<br/>começa em um ponto.
-          <em class="text-[#c5a059] not-italic block mt-2"> Uma raiz primordial.</em>
-        </h2>
-        <p class="text-zinc-600 text-lg leading-relaxed mb-8">
-          Que nasce da semente e depois se ramifica. O que você sente hoje são as ramificações.
-          A Tera Axial trabalha exatamente no ponto de origem.
-        </p>
-        
-        <div class="space-y-4">
-            <p class="text-[#c5a059] font-serif italic text-xl">
-                São sintomas. Ramificações de uma raiz que ainda não foi alcançada:
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {['Ansiedade sem causa', 'Padrões repetitivos', 'Bloqueios financeiros', 'Dores sem explicação', 'Relacionamentos cíclicos', 'Procrastinação'].map(item => (
-                    <div class="flex items-center gap-3 text-zinc-800 border-l-2 border-[#c5a059] pl-4 py-2 bg-zinc-50 font-medium">
-                        {item}
-                    </div>
-                ))}
-            </div>
-        </div>
-      </div>
+<script>
+  const checkboxes = document.querySelectorAll("#checklist input");
+  const resultado = document.getElementById("resultado");
 
-      <div class="bg-[#1a0b2e] p-12 text-white shadow-2xl relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-[#c5a059]/10 rounded-full -mr-16 -mt-16"></div>
-        <h3 class="font-serif text-2xl mb-6 text-[#c5a059]">Por que não resolve?</h3>
-        <p class="text-white/80 leading-relaxed mb-6">
-          E quanto mais você tenta resolver conscientemente, inconscientemente continua voltando.
-          Não porque você é fraco. Mas porque a raiz do problema não está onde você está olhando.
-        </p>
-        <p class="font-serif italic text-[#c5a059] text-xl">
-          "Você não resolve um problema que nasce na raiz tratando apenas os galhos."
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+  checkboxes.forEach(cb => {
+    cb.addEventListener("change", () => {
+      const count = [...checkboxes].filter(c => c.checked).length;
+      if (count >= 2) {
+        resultado.classList.remove("hidden");
+      }
+    });
+  });
+</script>
 
-<section class="py-24 md:py-32 px-6 bg-[#1a0b2e] text-white">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-        <span class="text-[#c5a059] text-xs font-bold tracking-widest uppercase">A Técnica</span>
-        <h2 class="font-serif text-3xl md:text-5xl mt-4">A Tera Axial acessa a raiz primordial emocional</h2>
-    </div>
-    
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <div class="space-y-6 text-white/80 text-lg leading-relaxed">
-            <p>
-                Não trabalha só na superfície. Por meio de <strong>hipnose conversacional</strong>, o processo
-                aprofundada progressivamente até chegar à emoção primordial que sustenta o sofrimento.
-            </p>
-            <p>
-                A hipnose conversacional não exige indução formal. Você não perde controle. Não apaga memórias. 
-                O processo apenas aprofunda o que acontece naturalmente enquanto falamos.
-            </p>
-        </div>
-        <div class="grid gap-4">
-            {[
-                { t: 'Padrões repetitivos', d: 'Situações diferentes, contextos diferentes, o mesmo resultado.' },
-                { t: 'Autossabotagem', d: 'Você quer avançar, mas algo te puxa de volta. É a raiz operando.' },
-                { t: 'Dores sem explicação', d: 'O corpo expressa o que ainda não foi resolvido emocionalmente.' }
-            ].map(card => (
-                <div class="p-6 border border-[#c5a059]/30 bg-white/5 hover:bg-white/10 transition-all">
-                    <h4 class="text-[#c5a059] font-serif text-xl mb-2">{card.t}</h4>
-                    <p class="text-white/60 text-sm">{card.d}</p>
-                </div>
-            ))}
-        </div>
-    </div>
-  </div>
-</section>
-
-<section id="processo" class="py-24 px-6 bg-[#f8f5f0]">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="font-serif text-[#1a0b2e] text-4xl md:text-5xl mb-4">Etapas e Investimento</h2>
-      <div class="w-24 h-1 bg-[#c5a059] mx-auto"></div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-8 border-t-8 border-[#c5a059] shadow-lg flex flex-col">
-        <span class="text-[#c5a059] font-bold text-xs uppercase tracking-widest mb-4">Primeiro Passo</span>
-        <h3 class="font-serif text-[#1a0b2e] text-2xl mb-6">Sessão de Entrada</h3>
-        <ul class="text-zinc-600 space-y-3 text-sm mb-8 flex-grow">
-          <li class="flex items-center gap-2">✔ Mapeamento dos sintomas</li>
-          <li class="flex items-center gap-2">✔ Identificação dos padrões</li>
-          <li class="flex items-center gap-2">✔ Já é um encontro terapêutico</li>
-          <li class="flex items-center gap-2">✔ Sem compromisso de continuidade</li>
-        </ul>
-        <div class="text-[#1a0b2e] font-serif text-4xl mb-6">R$ 250</div>
-        <a href={WA_LINK} class="block text-center bg-[#c5a059] text-[#1a0b2e] py-4 font-bold uppercase text-xs tracking-widest hover:bg-[#1a0b2e] hover:text-white transition-all">
-            Agendar Início
-        </a>
-      </div>
-
-      <div class="bg-[#1a0b2e] p-8 border-t-8 border-[#c5a059] shadow-2xl flex flex-col transform md:-translate-y-4">
-        <span class="bg-[#c5a059] text-[#1a0b2e] font-bold text-[10px] uppercase px-3 py-1 self-start mb-4">Recomendado</span>
-        <h3 class="font-serif text-white text-2xl mb-6">Protocolo Tera Axial</h3>
-        <p class="text-white/60 text-sm mb-6">As 4 etapas fundamentais (Abertura, Ramificações, Nova Raiz e Retorno).</p>
-        <div class="text-[#c5a059] font-serif text-4xl mb-6">R$ 2.500</div>
-        <a href={WA_LINK} class="block text-center border border-[#c5a059] text-[#c5a059] py-4 font-bold uppercase text-xs tracking-widest hover:bg-[#c5a059] hover:text-[#1a0b2e] transition-all">
-            Ver detalhes do protocolo
-        </a>
-      </div>
-
-      <div class="bg-white p-8 border-t-8 border-zinc-200 shadow-lg flex flex-col">
-        <span class="text-zinc-400 font-bold text-xs uppercase tracking-widest mb-4">Acompanhamento</span>
-        <h3 class="font-serif text-[#1a0b2e] text-2xl mb-6">Protocolo Profundo</h3>
-        <p class="text-zinc-600 text-sm mb-8">10 encontros de imersão para reforma íntima estrutural.</p>
-        <div class="text-[#1a0b2e] font-serif text-4xl mb-6">R$ 5.500</div>
-        <a href={WA_LINK} class="block text-center border border-zinc-300 text-zinc-500 py-4 font-bold uppercase text-xs tracking-widest hover:border-[#c5a059] hover:text-[#c5a059] transition-all">
-            Consultar disponibilidade
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="sobre" class="py-24 bg-[#1a0b2e] text-white overflow-hidden relative">
-    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-        <div class="border-2 border-[#c5a059]/30 p-2">
-            <div class="aspect-[3/4] bg-zinc-800 flex items-center justify-center relative">
-                <span class="italic text-white/20 uppercase tracking-widest">Foto Alexandre Barbosa</span>
-                <div class="absolute -bottom-4 -left-4 w-20 h-20 border-l-2 border-b-2 border-[#c5a059]"></div>
-            </div>
-        </div>
-        <div>
-            <span class="text-[#c5a059] text-xs font-bold tracking-widest uppercase">Quem escuta</span>
-            <h2 class="font-serif text-3xl md:text-5xl mt-4 mb-6">Filho de mãe solo,<br/>sem presença do pai.</h2>
-            <div class="space-y-4 text-white/70 leading-relaxed">
-                <p>Cresci no Rio de Janeiro, em área dominada pelo tráfico. Fui professor voluntário e Conselheiro Tutelar. Vivi a dor real antes do consultório.</p>
-                <p>Entendi que pessoas sofrem porque há algo na raiz que a informação não alcança. A Tera Axial é o resultado dessa busca.</p>
-            </div>
-            <div class="mt-8 pt-8 border-t border-white/10">
-                <p class="font-serif italic text-[#c5a059] text-xl">"Não ofereço atalhos. Ofereço honestidade."</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer class="bg-black py-12 border-t border-[#c5a059]/20 text-center">
-    <p class="text-white/40 text-xs tracking-[0.3em] uppercase mb-4">Tera Axial © 2026</p>
-    <p class="text-white/60 text-sm">Alexandre Barbosa | Psicanalista e Historiador</p>
-    <p class="text-white/40 text-[10px] mt-4">Rio de Janeiro (Tijuca, Zona Sul, Barra) • Online para o Brasil</p>
-</footer>
-
-</Layout>
-
-<style is:global>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;700&display=swap');
-  
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; background: #1a0b2e; color: white; }
-  .font-serif { font-family: 'Playfair Display', serif; }
-</style>          
+</BaseLayout>
