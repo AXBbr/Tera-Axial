@@ -1,17 +1,50 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tera Axial — Encontre alívio e equilíbrio</title>
-  <link rel="icon" href="/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tera Axial — Alexandre Barbosa</title>
+<link rel="icon" href="favicon.ico" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-main:#1a0b2e;--bg-secondary:#0f172a;--gold:#c5a059;--gold-light:#d6b86a;
+  --white:#ffffff;--cta-green:#22c55e;--muted:#cfcfd6;--radius:12px;--container:16px;--max-width:1200px;
+}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg-main);color:var(--white);-webkit-font-smoothing:antialiased;line-height:1.5}
+.container{max-width:var(--max-width);margin:0 auto;padding:0 var(--container)}
+.site-header{padding:18px 0}.header-inner{display:flex;align-items:center;justify-content:flex-start}.logo{height:44px}
+.hero{padding:18px 0 28px}.hero-content{display:flex;flex-direction:column;gap:18px}.hero-title{font-family:"Playfair Display",serif;font-size:28px;line-height:1.15;margin:0;color:var(--white)}.hero-sub{margin:0;color:var(--muted)}
+.video-wrap{margin-top:8px;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.5);background:var(--bg-secondary)}
+.video-player{width:100%;height:auto;display:block;background:#000}
+.button-cta{display:inline-block;background:linear-gradient(180deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--bg-main);padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:600;transition:filter .15s ease,transform .12s ease}
+.button-cta:hover{filter:brightness(1.05);transform:translateY(-2px)}
+.button-secondary{display:inline-block;background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--white);padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;margin-right:8px}
+.button-primary{background:var(--cta-green);color:var(--white);padding:10px 16px;border-radius:10px;border:none}
+.section{padding:18px 0}.card-section .card{background:var(--bg-secondary);border-radius:var(--radius);padding:18px;box-shadow:0 8px 24px rgba(0,0,0,0.45)}.section-title{font-family:"Playfair Display",serif;font-size:20px;margin:0 0 8px}.muted{color:var(--muted);margin:0 0 12px}.bullets{margin:12px 0;padding-left:18px}.split{display:flex;flex-direction:column;gap:12px}.split-media{display:flex;justify-content:center;align-items:center}.rounded-img{width:100%;max-width:420px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.45)}
+.checklist label{display:block;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.03);font-size:15px}.checklist-closing{margin-top:12px;font-weight:600;color:var(--gold)}
+.video-cards{display:flex;gap:12px;flex-wrap:wrap}.video-card{flex:1 1 30%;min-width:180px;background:var(--bg-secondary);border-radius:10px;padding:8px}.yt-thumb{width:100%;height:160px;background:#000;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff}
+.faq{margin-top:12px}.faq-q{width:100%;text-align:left;padding:12px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--white);font-family:"Playfair Display",serif;margin-bottom:6px}.faq-a{display:none;padding:10px 12px;background:rgba(255,255,255,0.02);border-radius:8px;margin-bottom:8px;color:var(--muted)}
+.site-footer{padding:18px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:24px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}.footer-links nav a{color:var(--muted);text-decoration:none;margin-left:12px}
+.whatsapp-float{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:var(--cta-green);display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 8px 30px rgba(0,0,0,0.4);text-decoration:none;z-index:999}
+.progressive-form .form-step{padding:8px 0}.progressive-form .form-label{font-weight:600;margin-bottom:8px;display:block}.options label{display:block;padding:8px 6px;border-bottom:1px dashed rgba(255,255,255,0.03)}.form-actions{display:flex;gap:8px;justify-content:flex-end;padding-top:12px}
+.cookie-banner{position:fixed;left:12px;right:12px;bottom:12px;background:#111;padding:12px;border-radius:8px;display:flex;gap:8px;align-items:center;z-index:10000}
+@media(min-width:768px){.hero-title{font-size:36px}.split{flex-direction:row}.video-card{min-width:260px}}
+/* small helper */
+.hidden{display:none!important}
+</style>
 </head>
-<body class="bg-main">
+<body>
   <header class="site-header">
     <div class="container header-inner">
-      <img src="logo.svg" alt="Tera Axial — Alexandre Barbosa" class="logo" />
+      <!-- Logo SVG inline (otimizado) -->
+      <div style="display:flex;align-items:center;gap:12px">
+        <svg class="logo" viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tera Axial logo">
+          <!-- Substitua pelo seu SVG completo se desejar -->
+          <rect width="200" height="40" fill="none"></rect>
+          <text x="0" y="28" font-family="Playfair Display, serif" font-size="20" fill="#c5a059">Tera Axial</text>
+        </svg>
+      </div>
     </div>
   </header>
 
@@ -23,16 +56,15 @@
         <p class="hero-sub">A Tera Axial trabalha na raiz emocional dos padrões que se repetem, trazendo reorganização interna e alívio real.</p>
 
         <div class="video-wrap" id="video-placeholder">
-          <!-- Substitua o src do <video> pelo seu MP4 quando estiver pronto -->
           <video id="presentation-video" class="video-player" controls preload="metadata" poster="">
-            <!-- Placeholder: remova o comentário e adicione seu MP4 -->
+            <!-- Para ativar seu vídeo: coloque video-apresentacao.mp4 na raiz e descomente a linha abaixo -->
             <!-- <source src="video-apresentacao.mp4" type="video/mp4"> -->
             Seu navegador não suporta vídeo.
           </video>
         </div>
 
         <div class="hero-cta">
-          <a class="button-cta" data-wa="agendar">Agendar minha sessão (R$98)</a>
+          <a class="button-cta" data-wa="agendar" role="button">Agendar minha sessão (R$98)</a>
           <p class="microcopy">Sessão completa com início, meio e fim — condição especial R$98.</p>
         </div>
       </div>
@@ -44,7 +76,7 @@
         <h2 class="section-title">Leia com calma e seja sincero</h2>
         <p class="muted">Marque apenas o que realmente tem a ver com você.</p>
 
-        <form id="checklist-form" class="checklist">
+        <form id="checklist-form" class="checklist" aria-label="Checklist de sintomas">
           <label><input type="checkbox" name="c1"> Eu até sei o que preciso mudar, mas na prática não consigo manter isso por muito tempo.</label>
           <label><input type="checkbox" name="c2"> Parece que eu mudo as coisas por fora, mas no fim tudo acaba dando no mesmo.</label>
           <label><input type="checkbox" name="c3"> Mesmo mudando de ambiente, trabalho ou relacionamento, no fim as coisas sempre se repetem.</label>
@@ -57,19 +89,19 @@
 
         <p class="checklist-closing">Se você marcou duas ou mais opções, é bem provável que exista algo em você pedindo para ser visto — e não ignorado mais uma vez.</p>
         <div class="card-actions">
-          <a href="/prelanding.html" class="button-secondary">Quero entender como funciona</a>
+          <a href="#prelanding" class="button-secondary">Quero entender como funciona</a>
         </div>
       </div>
     </section>
 
-    <!-- IDENTIFICAÇÃO / QUEBRA DE CRENÇA -->
-    <section class="container section split">
+    <!-- SPLIT IDENTIFICAÇÃO -->
+    <section class="container section split" id="prelanding">
       <div class="split-text">
         <h3>Se fosse só uma questão de força de vontade, você já teria resolvido.</h3>
         <p>O que se repete na sua vida tem uma raiz mais profunda — e é aí que a mudança começa.</p>
       </div>
       <div class="split-media">
-        <img src="pb-3x4.jpg" alt="Imagem de identificação" class="rounded-img">
+        <img src="pb-3x4.jpg" alt="Imagem de identificação" class="rounded-img" onerror="this.style.display='none'">
       </div>
     </section>
 
@@ -88,16 +120,9 @@
     <section class="container section">
       <h2 class="section-title">O que dizem sobre a Tera Axial</h2>
       <div class="video-cards" id="video-cards">
-        <!-- Cards com embeds do YouTube (lazy load) -->
-        <div class="video-card">
-          <div class="yt-thumb" data-src="https://www.youtube.com/embed/Q6PhHWcCOAQ?rel=0&autoplay=0"></div>
-        </div>
-        <div class="video-card">
-          <div class="yt-thumb" data-src="https://www.youtube.com/embed/WVR99NWIlPk?rel=0&autoplay=0"></div>
-        </div>
-        <div class="video-card">
-          <div class="yt-thumb" data-src="https://www.youtube.com/embed/c7h0wAeBm6M?rel=0&autoplay=0"></div>
-        </div>
+        <div class="video-card"><div class="yt-thumb" data-src="https://www.youtube.com/embed/Q6PhHWcCOAQ?rel=0&autoplay=0" role="button" aria-label="Vídeo 1"></div></div>
+        <div class="video-card"><div class="yt-thumb" data-src="https://www.youtube.com/embed/WVR99NWIlPk?rel=0&autoplay=0" role="button" aria-label="Vídeo 2"></div></div>
+        <div class="video-card"><div class="yt-thumb" data-src="https://www.youtube.com/embed/c7h0wAeBm6M?rel=0&autoplay=0" role="button" aria-label="Vídeo 3"></div></div>
       </div>
       <p class="muted">Cada história é única, mas o ponto de partida é sempre semelhante: olhar para a raiz do que se repete, ressignificar e permitir uma nova organização interna.</p>
     </section>
@@ -114,7 +139,7 @@
         </ul>
         <p class="muted">O valor de R$98 é uma condição especial para quem chega por este canal.</p>
         <div class="card-actions">
-          <a class="button-cta" data-wa="agendar">Agendar meu horário</a>
+          <a class="button-cta" data-wa="agendar" role="button">Agendar meu horário</a>
         </div>
       </div>
     </section>
@@ -143,30 +168,297 @@
     <!-- CTA FINAL -->
     <section class="container section cta-final">
       <h3>Se você chegou até aqui, talvez já tenha sentido que é hora de olhar para isso de verdade.</h3>
-      <a class="button-cta" data-wa="agendar">Agendar meu horário</a>
+      <a class="button-cta" data-wa="agendar" role="button">Agendar meu horário</a>
     </section>
+
+    <!-- PRELANDING FORM (embedded section) -->
+    <section class="container section card-section" id="form-section">
+      <div class="card">
+        <h2 class="section-title">Isso vai levar menos de 2 minutos…</h2>
+        <p class="muted">Responda com sinceridade. No final, se qualificado, você será direcionado para a página principal.</p>
+
+        <form id="progressive-form" class="progressive-form" novalidate>
+          <!-- Steps controlled by JS -->
+          <div class="form-step" data-step="1">
+            <label class="form-label">Hoje, o que mais tem te feito sofrer em silêncio?</label>
+            <div class="options">
+              <label><input type="checkbox" name="sofrimento" value="Sensação constante de estar ansioso"> Sensação constante de estar ansioso</label>
+              <label><input type="checkbox" name="sofrimento" value="Angústia ou aperto interno que não sabe explicar"> Angústia ou aperto interno que não sabe explicar</label>
+              <label><input type="checkbox" name="sofrimento" value="Padrões que se repetem na sua vida"> Padrões que se repetem na sua vida</label>
+              <label><input type="checkbox" name="sofrimento" value="Autossabotagem"> Autossabotagem</label>
+              <label><input type="checkbox" name="sofrimento" value="Relacionamentos que sempre dão errado"> Relacionamentos que sempre dão errado</label>
+              <label><input type="checkbox" name="sofrimento" value="Travamento emocional / sensação de estar bloqueado"> Travamento emocional / sensação de estar bloqueado</label>
+              <label><input type="checkbox" name="sofrimento" value="Dificuldade financeira que não consegue explicar"> Dificuldade financeira que não consegue explicar</label>
+              <label><input type="checkbox" name="sofrimento" value="Sensação de estar perdido ou sem direção"> Sensação de estar perdido ou sem direção</label>
+            </div>
+            <div class="form-actions"><button type="button" class="button-secondary" data-action="next">Próxima</button></div>
+          </div>
+
+          <div class="form-step" data-step="2" hidden>
+            <label class="form-label">Você já tentou resolver isso… e mesmo assim continua acontecendo?</label>
+            <div class="options">
+              <label><input type="radio" name="tentativas" value="Sim, com terapia tradicional"> Sim, com terapia tradicional</label>
+              <label><input type="radio" name="tentativas" value="Sim, com outras abordagens (constelação, terapias energéticas, etc.)"> Sim, com outras abordagens</label>
+              <label><input type="radio" name="tentativas" value="Sim, já tentei de tudo um pouco"> Sim, já tentei de tudo um pouco</label>
+              <label><input type="radio" name="tentativas" value="Ainda não tentei de verdade"> Ainda não tentei de verdade</label>
+            </div>
+            <div class="form-actions"><button type="button" class="button-secondary" data-action="back">Voltar</button><button type="button" class="button-secondary" data-action="next">Próxima</button></div>
+          </div>
+
+          <div class="form-step" data-step="3" hidden>
+            <label class="form-label">Se nada mudar… o que mais te preocupa no seu futuro?</label>
+            <div class="options">
+              <label><input type="checkbox" name="futuro" value="Continuar preso nos mesmos padrões"> Continuar preso nos mesmos padrões</label>
+              <label><input type="checkbox" name="futuro" value="Ver minha vida não sair do lugar"> Ver minha vida não sair do lugar</label>
+              <label><input type="checkbox" name="futuro" value="Prejudicar ainda mais meus relacionamentos"> Prejudicar ainda mais meus relacionamentos</label>
+              <label><input type="checkbox" name="futuro" value="Piorar minha situação emocional ou financeira"> Piorar minha situação emocional ou financeira</label>
+              <label><input type="checkbox" name="futuro" value="Só sei que não quero continuar assim"> Só sei que não quero continuar assim</label>
+            </div>
+            <div class="form-actions"><button type="button" class="button-secondary" data-action="back">Voltar</button><button type="button" class="button-secondary" data-action="next">Próxima</button></div>
+          </div>
+
+          <div class="form-step" data-step="4" hidden>
+            <label class="form-label">Você sente que o que você vive hoje pode ter uma raiz mais profunda que nunca foi realmente acessada?</label>
+            <div class="options">
+              <label><input type="radio" name="profundidade" value="Sim, claramente"> Sim, claramente</label>
+              <label><input type="radio" name="profundidade" value="Já pensei nisso"> Já pensei nisso</label>
+              <label><input type="radio" name="profundidade" value="Nunca parei pra pensar"> Nunca parei pra pensar</label>
+            </div>
+            <div class="form-actions"><button type="button" class="button-secondary" data-action="back">Voltar</button><button type="button" class="button-secondary" data-action="next">Próxima</button></div>
+          </div>
+
+          <div class="form-step" data-step="5" hidden>
+            <label class="form-label">Sobre o atendimento, qual dessas opções faz mais sentido pra você hoje?</label>
+            <div class="options">
+              <label><input type="radio" name="tipo_atendimento" value="Estou buscando atendimento gratuito"> Estou buscando atendimento gratuito</label>
+              <label><input type="radio" name="tipo_atendimento" value="Estou buscando uma condição com valor reduzido"> Estou buscando uma condição com valor reduzido</label>
+              <label><input type="radio" name="tipo_atendimento" value="Estou disposto(a) a investir em um atendimento particular"> Estou disposto(a) a investir em um atendimento particular</label>
+            </div>
+            <div class="form-actions"><button type="button" class="button-secondary" data-action="back">Voltar</button><button type="button" class="button-secondary" data-action="next">Próxima</button></div>
+          </div>
+
+          <div class="form-step" data-step="6" hidden>
+            <label class="form-label">Hoje, essa sessão inicial está com valor de R$98. Você consegue assumir esse investimento neste momento?</label>
+            <div class="options">
+              <label><input type="radio" name="investimento" value="Sim"> Sim</label>
+              <label><input type="radio" name="investimento" value="Não"> Não</label>
+            </div>
+            <div class="form-actions"><button type="button" class="button-secondary" data-action="back">Voltar</button><button type="button" class="button-secondary" data-action="next">Próxima</button></div>
+          </div>
+
+          <div class="form-step" data-step="7" hidden>
+            <label class="form-label">A decisão de começar depende só de você?</label>
+            <div class="options">
+              <label><input type="radio" name="autonomia" value="Sim"> Sim</label>
+              <label><input type="radio" name="autonomia" value="Não, preciso alinhar com alguém"> Não, preciso alinhar com alguém</label>
+            </div>
+            <div class="form-actions"><button type="button" class="button-secondary" data-action="back">Voltar</button><button type="button" class="button-secondary" data-action="next">Próxima</button></div>
+          </div>
+
+          <div class="form-step" data-step="8" hidden>
+            <label class="form-label">Tratar o que te angustia, ainda é uma prioridade para você nos dias de hoje?</label>
+            <div class="options">
+              <label><input type="radio" name="intencao" value="Sim, quero resolver o mais rápido possível, não aguento mais viver assim"> Sim, quero resolver o mais rápido possível, não aguento mais viver assim</label>
+              <label><input type="radio" name="intencao" value="Não, ainda estou pensando, processando as emoções"> Não, ainda estou pensando, processando as emoções</label>
+            </div>
+            <div class="form-actions"><button type="button" class="button-secondary" data-action="back">Voltar</button><button type="button" class="button-primary" data-action="finish">Finalizar</button></div>
+          </div>
+
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+            <label><input type="checkbox" id="lgpd-consent"> Ao enviar, concordo com a <a href="/politica-privacidade.html" style="color:var(--gold)">política de privacidade</a>.</label>
+          </div>
+        </form>
+
+        <div id="form-result" class="form-result hidden" aria-live="polite"></div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <img src="logo.svg" alt="Tera Axial" class="logo-small">
+      <div style="display:flex;align-items:center;gap:12px">
+        <svg class="logo-small" viewBox="0 0 200 40" width="120" height="24" aria-hidden="true"><text x="0" y="18" font-family="Playfair Display, serif" font-size="14" fill="#c5a059">Tera Axial</text></svg>
+      </div>
       <div class="footer-links">
         <span>Tera Axial | Alexandre Barbosa — Rio de Janeiro, RJ</span>
         <nav>
-          <a href="https://www.instagram.com/barbosaalexandre">Instagram</a>
+          <a href="https://www.instagram.com/barbosaalexandre" target="_blank" rel="noopener">Instagram</a>
           <a href="/politica-privacidade.html">Política de privacidade</a>
           <a href="/termos.html">Termos de uso</a>
-          <a href="/blog">Blog/Artigos</a>
         </nav>
       </div>
     </div>
   </footer>
 
   <!-- WhatsApp flutuante -->
-  <a id="whatsapp-flutuante" class="whatsapp-float" aria-label="WhatsApp">
+  <a id="whatsapp-flutuante" class="whatsapp-float" aria-label="WhatsApp" role="link">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0012 0C5.4 0 .1 5.4.1 12c0 2.1.6 4.1 1.8 5.9L0 24l6.4-1.7A11.9 11.9 0 0012 24c6.6 0 12-5.4 12-12 0-1.9-.4-3.7-1.5-5.3zM12 21.5c-1.6 0-3.1-.4-4.4-1.1l-.3-.2-3.8 1 1-3.6-.2-.3A9.5 9.5 0 012.5 12 9.5 9.5 0 0112 2.5 9.5 9.5 0 0121.5 12 9.5 9.5 0 0112 21.5z"/></svg>
   </a>
 
-  <script src="scripts.js"></script>
+  <!-- Cookie banner (inserido dinamicamente via JS if needed) -->
+  <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-live="polite">
+    <div style="flex:1;color:#fff">Usamos cookies para melhorar a experiência e medir visitas. Aceita rastreamento analítico?</div>
+    <button id="accept-cookies" class="button-primary">Aceitar</button>
+    <button id="reject-cookies" class="button-secondary">Recusar</button>
+  </div>
+
+<script>
+/* Single-file JS: formulário progressivo, WhatsApp link, lazy load YouTube, FAQ, cookie banner */
+(function(){
+  const waBase = 'https://wa.me/5521997605820?text=';
+  const waMessage = encodeURIComponent('Olá Alexandre, quero agendar a sessão inicial (R$98).');
+  const waLink = waBase + waMessage;
+
+  // assign WA to CTAs
+  document.querySelectorAll('[data-wa="agendar"]').forEach(btn=>{
+    btn.setAttribute('href', waLink);
+    btn.setAttribute('target','_blank');
+    btn.classList.add('button-cta');
+  });
+  const float = document.getElementById('whatsapp-flutuante');
+  if(float){ float.setAttribute('href', waLink); float.setAttribute('target','_blank'); }
+
+  // Lazy load YouTube thumbnails -> embed on click
+  document.querySelectorAll('.yt-thumb').forEach(node=>{
+    node.style.background = '#111';
+    node.innerHTML = '<svg width="48" height="48" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>';
+    node.addEventListener('click', function(){
+      const src = node.getAttribute('data-src');
+      if(!src) return;
+      const iframe = document.createElement('iframe');
+      iframe.setAttribute('src', src);
+      iframe.setAttribute('frameborder','0');
+      iframe.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen','');
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      node.innerHTML = '';
+      node.appendChild(iframe);
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click', function(){
+      const a = q.nextElementSibling;
+      const open = a.style.display === 'block';
+      document.querySelectorAll('.faq-a').forEach(x=>x.style.display='none');
+      if(!open) a.style.display = 'block';
+    });
+  });
+
+  // Progressive form logic
+  const form = document.getElementById('progressive-form');
+  if(form){
+    let currentStep = 1;
+    const steps = form.querySelectorAll('.form-step');
+    const totalSteps = steps.length;
+    const showStep = (n) => {
+      steps.forEach(s=>s.hidden=true);
+      const el = form.querySelector('.form-step[data-step="'+n+'"]');
+      if(el) el.hidden = false;
+      currentStep = n;
+      window.scrollTo({top:0,behavior:'smooth'});
+    };
+    showStep(1);
+
+    form.addEventListener('click', function(e){
+      const btn = e.target.closest('button');
+      if(!btn) return;
+      const action = btn.getAttribute('data-action');
+      if(action === 'next'){
+        // branching logic
+        if(currentStep === 5){
+          const sel = form.querySelector('input[name="tipo_atendimento"]:checked');
+          if(!sel){ showStep(currentStep+1); return; }
+          const val = sel.value;
+          if(val.includes('gratuito')){ showFinalMessage('cutoff_gratuito'); return; }
+          if(val.includes('valor reduzido')){ showStep(6); return; }
+          showStep(7); return;
+        }
+        if(currentStep === 6){
+          const sel = form.querySelector('input[name="investimento"]:checked');
+          if(!sel){ showFinalMessage('cutoff_nao_paga'); return; }
+          if(sel.value === 'Sim'){ showStep(7); return; }
+          showFinalMessage('cutoff_nao_paga'); return;
+        }
+        if(currentStep < totalSteps) showStep(currentStep+1);
+      } else if(action === 'back'){
+        if(currentStep > 1) showStep(currentStep-1);
+      } else if(action === 'finish'){
+        const finalStep = form.querySelector('.form-step[data-step="8"]');
+        const sel = finalStep.querySelector('input[name="intencao"]:checked');
+        if(!sel){ showFinalMessage('final_message_not_ready'); return; }
+        if(sel.value.includes('resolver')){ showFinalMessage('final_message_approved'); return; }
+        showFinalMessage('final_message_not_ready'); return;
+      }
+    });
+
+    function showFinalMessage(key){
+      const result = document.getElementById('form-result');
+      result.classList.remove('hidden');
+      form.classList.add('hidden');
+      if(key === 'cutoff_gratuito'){
+        result.innerHTML = '<div class="card"><h3>No momento estamos organizando a agenda para atendimentos sociais gratuitos</h3><p>Assim que surgirem novas vagas, entraremos em contato.</p></div>';
+      } else if(key === 'cutoff_nao_paga'){
+        result.innerHTML = '<div class="card"><h3>No momento estamos ajustando a agenda para novas condições de atendimento</h3><p>Assim que houver disponibilidade, entraremos em contato com você.</p></div>';
+      } else if(key === 'final_message_not_ready'){
+        result.innerHTML = '<div class="card"><h3>Tudo bem, cada pessoa tem seu tempo</h3><p>Se agora não é o momento de olhar para isso, está tudo certo. Te convido a me acompanhar no Instagram.</p><div class="card-actions"><a class="button-secondary" href="https://www.instagram.com/barbosaalexandre" target="_blank">Acompanhar no Instagram</a><a class="button-secondary" href="#prelanding">Ver mais sobre a Tera Axial</a></div></div>';
+      } else if(key === 'final_message_approved'){
+        result.innerHTML = '<div class="card"><h3>Pelo que você respondeu…</h3><p>Resolver aquilo que te angustia não é falta de força de vontade. Com certeza existe uma raiz mais profunda sustentando e te prendendo nisso. E é exatamente aí que minha terapia trabalha: na raiz.</p><div class="card-actions"><a class="button-cta" href="'+waLink+'" target="_blank">Ver como funciona</a></div></div>';
+      }
+    }
+  }
+
+  // Cookie banner logic (consent-based injection)
+  const cookieBanner = document.getElementById('cookie-banner');
+  const accepted = localStorage.getItem('tera_cookies');
+  function showBannerIfNeeded(){
+    if(accepted === 'accepted' || accepted === 'rejected') return;
+    cookieBanner.classList.remove('hidden');
+  }
+  document.getElementById('accept-cookies').addEventListener('click', function(){
+    localStorage.setItem('tera_cookies','accepted');
+    cookieBanner.classList.add('hidden');
+    injectTrackingScripts();
+  });
+  document.getElementById('reject-cookies').addEventListener('click', function(){
+    localStorage.setItem('tera_cookies','rejected');
+    cookieBanner.classList.add('hidden');
+  });
+  // inject scripts only after consent; IDs empty — replace before enabling
+  function injectTrackingScripts(){
+    // GA4
+    const GA_ID = ''; // inserir G-XXXXXXXXXX
+    if(GA_ID){
+      const s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id='+GA_ID; document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date()); gtag('config', GA_ID, { 'anonymize_ip': true });
+    }
+    // Meta Pixel
+    const PIXEL_ID = ''; // inserir PIXEL_ID
+    if(PIXEL_ID){
+      const p = document.createElement('script'); p.innerHTML = "!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init','"+PIXEL_ID+"'); fbq('track','PageView');"; document.head.appendChild(p);
+    }
+    // GTM (optional)
+    const GTM_ID = ''; // inserir GTM-XXXXXXX
+    if(GTM_ID){
+      const g = document.createElement('script'); g.innerHTML = "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','"+GTM_ID+"');"; document.head.appendChild(g);
+    }
+  }
+  // if already accepted, inject now
+  if(localStorage.getItem('tera_cookies') === 'accepted') injectTrackingScripts();
+  showBannerIfNeeded();
+
+  // accessibility: show focus outlines on Tab
+  document.body.addEventListener('keyup', function(e){ if(e.key === 'Tab') document.body.classList.add('show-focus'); });
+
+  // placeholder trackEvent hooks
+  window.trackEvent = function(name, data){ /* hook: integrate analytics here if desired */ };
+
+})();
+</script>
 </body>
 </html>
