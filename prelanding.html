@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Inicial - Tera Axial</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    
+    <style>
+        .step { display: none; }
+        .step.active { display: block; animation: fadeIn 0.5s ease; }
+        .quiz-container { max-width: 650px; margin: 80px auto; padding: 40px; background: var(--bg-secondary, #0f172a); border-radius: 12px; border: 1px solid var(--gold, #c5a059); }
+        .option-label { display: block; padding: 15px; margin-bottom: 12px; border: 1px solid #334155; border-radius: 8px; cursor: pointer; transition: 0.3s; font-size: 16px; }
+        .option-label:hover { border-color: var(--gold, #c5a059); background: rgba(197, 160, 89, 0.1); }
+        input[type="radio"], input[type="checkbox"] { margin-right: 12px; transform: scale(1.2); }
+        .hidden { display: none !important; }
+        .step-number { color: var(--gold, #c5a059); font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 15px; }
+        .quiz-title { font-family: 'Playfair Display', serif; color: var(--white, #ffffff); font-size: 24px; margin-bottom: 25px; line-height: 1.4; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .btn-principal { width: 100%; text-align: center; margin-top: 20px; cursor: pointer; border: none; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="quiz-container">
+            
+            <form id="funnelForm">
+                
+                <div class="step active" data-step="1">
+                    <span class="step-number">Passo 1 de 6</span>
+                    <h2 class="quiz-title">Hoje, o que mais tem travado sua vida e te feito sofrer em silêncio?</h2>
+                    <label class="option-label"><input type="checkbox" name="dor" value="ansiedade"> Ansiedade constante</label>
+                    <label class="option-label"><input type="checkbox" name="dor" value="padroes"> Padrões que se repetem</label>
+                    <label class="option-label"><input type="checkbox" name="dor" value="autossabotagem"> Autossabotagem</label>
+                    <label class="option-label"><input type="checkbox" name="dor" value="financeiro"> Dificuldades financeiras</label>
+                    <label class="option-label"><input type="checkbox" name="dor" value="estagnacao"> Estagnação em seus projetos</label>
+                    <label class="option-label"><input type="checkbox" name="dor" value="profissional"> Problemas profissionais</label>
+                    <label class="option-label"><input type="checkbox" name="dor" value="relacionamentos"> Relacionamentos que dão errado</label>
+                    <label class="option-label"><input type="checkbox" name="dor" value="travamento"> Travamento emocional</label>
+                    <label class="option-label"><input type="checkbox" name="dor" value="perdido"> Sensação de estar perdido</label>
+                    <button type="button" class="btn-principal" onclick="nextStep(2)">Avançar para a próxima</button>
+                </div>
+
+                <div class="step" data-step="2">
+                    <span class="step-number">Passo 2 de 6</span>
+                    <h2 class="quiz-title">Você já tentou resolver isso com terapia?</h2>
+                    <label class="option-label"><input type="radio" name="frustracao" value="tradicional"> Sim, em terapia tradicional</label>
+                    <label class="option-label"><input type="radio" name="frustracao" value="complementar"> Sim, mas outras abordagens terapêuticas complementares (Reiki, Tarô, Apometria, Constelação Familiar etc)</label>
+                    <label class="option-label"><input type="radio" name="frustracao" value="hipnose"> Sim, com Hipnose</label>
+                    <label class="option-label"><input type="radio" name="frustracao" value="varias"> Sim, fiz duas ou mais terapias diferentes</label>
+                    <label class="option-label"><input type="radio" name="frustracao" value="nunca"> Não, nunca fiz terapia</label>
+                    <button type="button" class="btn-principal" onclick="nextStep(3)">Avançar para a próxima</button>
+                </div>
+
+                <div class="step" data-step="3">
+                    <span class="step-number">Passo 3 de 6</span>
+                    <h2 class="quiz-title">Se nada mudar nos próximos 6 meses... o que mais te preocupa?</h2>
+                    <label class="option-label"><input type="checkbox" name="inercia" value="preso"> Continuar preso no mesmo lugar</label>
+                    <label class="option-label"><input type="checkbox" name="inercia" value="perder_amor"> Perder quem eu amo</label>
+                    <label class="option-label"><input type="checkbox" name="inercia" value="saude"> Piorar minha saúde emocional</label>
+                    <label class="option-label"><input type="checkbox" name="inercia" value="tempo_dinheiro"> Perder mais tempo e dinheiro com soluções superficiais</label>
+                    <button type="button" class="btn-principal" onclick="nextStep(4)">Avançar para a próxima</button>
+                </div>
+
+                <div class="step" data-step="4">
+                    <span class="step-number">Passo 4 de 6</span>
+                    <h2 class="quiz-title">Você sente que o seu problema tem uma raiz numa estrutura mais profunda (inconsciente ou sistêmica) que nunca foi realmente acessada?</h2>
+                    <label class="option-label"><input type="radio" name="raiz" value="certeza"> Sim, tenho certeza</label>
+                    <label class="option-label"><input type="radio" name="raiz" value="suspeita"> Já suspeitei disso</label>
+                    <label class="option-label"><input type="radio" name="raiz" value="nunca_pensei"> Nunca parei para pensar dessa forma</label>
+                    <button type="button" class="btn-principal" onclick="nextStep(5)">Avançar para a próxima</button>
+                </div>
+
+                <div class="step" data-step="5">
+                    <span class="step-number">Passo 5 de 6</span>
+                    <h2 class="quiz-title">O Mapeamento Axial é um diagnóstico técnico individual e profundo com investimento de <strong>R$ 98</strong>. Você está de acordo em realizar este investimento para identificar a raiz do seu problema?</h2>
+                    <label class="option-label"><input type="radio" name="investimento" value="A"> Sim, estou pronto(a) para esse meu primeiro investimento na resolução do que me aflige ou trava minha vida.</label>
+                    <label class="option-label"><input type="radio" name="investimento" value="B"> No momento, busco apenas informações ou ajuda gratuita.</label>
+                    <button type="button" class="btn-principal" onclick="checkBifurcationStep5()">Avançar para a próxima</button>
+                </div>
+
+                <div class="step" data-step="6">
+                    <span class="step-number">Passo 6 de 6</span>
+                    <h2 class="quiz-title">Retomar sua soberania emocional e resolver essa angústia ou travamento é uma prioridade absoluta para você hoje?</h2>
+                    <label class="option-label"><input type="radio" name="prioridade" value="A"> Sim, quero resolver o quanto antes. Não quero mais viver assim.</label>
+                    <label class="option-label"><input type="radio" name="prioridade" value="B"> Não, ainda estou apenas processando as emoções.</label>
+                    <button type="button" class="btn-principal" onclick="checkBifurcationStep6()">Finalizar Diagnóstico</button>
+                </div>
+            </form>
+
+            <div id="result-corte" class="hidden" style="text-align: center;">
+                <h2 style="color: var(--gold, #c5a059); font-family: 'Playfair Display', serif; margin-bottom: 20px;">Entendemos o seu momento.</h2>
+                <p style="margin-bottom: 25px; color: var(--text-muted, #cfcfd6);">Atualmente, o método Tera Axial exige um comprometimento profundo para resultados definitivos. Sugerimos que acompanhe nossos conteúdos gratuitos para se preparar para um momento futuro.</p>
+                <a href="https://instagram.com/alexandrebarbosa" class="btn-principal" style="display: inline-block;">Acompanhar no Instagram</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
